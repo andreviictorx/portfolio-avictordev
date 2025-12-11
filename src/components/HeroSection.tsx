@@ -18,7 +18,7 @@ export function HeroSection() {
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32 xl:gap-40">
           {/* Profile Image */}
           <div className="relative">
             <div className="w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80 rounded-full border-4 border-primary glow-primary overflow-hidden bg-secondary flex items-center justify-center">

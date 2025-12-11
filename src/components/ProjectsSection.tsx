@@ -30,80 +30,85 @@ export function ProjectsSection() {
           </div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`bg-card border rounded-2xl overflow-hidden group hover:border-primary/50 transition-all ${
-                  project.featured ? "border-primary/30 lg:col-span-2" : "border-border"
+                className={`bg-card border rounded-xl overflow-hidden group hover:border-primary/50 transition-all ${
+                  project.featured ? "border-primary/30" : "border-border"
                 }`}
               >
                 {/* Project Image Placeholder */}
                 <div className="aspect-video bg-secondary/50 relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <span className="font-mono text-muted-foreground text-sm">
-                      // preview do projeto
+                    <span className="font-mono text-muted-foreground text-xs">
+                      // preview
                     </span>
                   </div>
                   {project.featured && (
-                    <div className="absolute top-4 left-4 flex items-center gap-2 bg-primary text-primary-foreground px-3 py-1 rounded-full text-xs font-semibold">
-                      <Star className="h-3 w-3" />
+                    <div className="absolute top-2 left-2 flex items-center gap-1 bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-[10px] font-semibold">
+                      <Star className="h-2.5 w-2.5" />
                       Destaque
                     </div>
                   )}
                 </div>
 
                 {/* Project Info */}
-                <div className="p-6 sm:p-8">
-                  <h3 className="text-xl sm:text-2xl font-bold text-foreground mb-3">
+                <div className="p-4">
+                  <h3 className="text-base font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
-                  <p className="text-muted-foreground mb-6">{project.description}</p>
+                  <p className="text-muted-foreground text-xs mb-3 line-clamp-2">{project.description}</p>
 
                   {/* Stack */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {project.stack.map((tech, techIndex) => (
+                  <div className="flex flex-wrap gap-1 mb-3">
+                    {project.stack.slice(0, 4).map((tech, techIndex) => (
                       <span
                         key={techIndex}
-                        className="px-3 py-1 bg-secondary text-muted-foreground rounded-md text-xs font-medium"
+                        className="px-2 py-0.5 bg-secondary text-muted-foreground rounded text-[10px] font-medium"
                       >
                         {tech}
                       </span>
                     ))}
+                    {project.stack.length > 4 && (
+                      <span className="px-2 py-0.5 bg-secondary text-muted-foreground rounded text-[10px] font-medium">
+                        +{project.stack.length - 4}
+                      </span>
+                    )}
                   </div>
 
                   {/* Links */}
-                  <div className="flex flex-wrap gap-3">
+                  <div className="flex gap-2">
                     <Button
                       variant="outline"
                       size="sm"
-                      className="gap-2"
+                      className="h-7 px-2 text-xs gap-1"
                       asChild
                     >
                       <a href={project.links.frontend} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4" />
-                        Front-end
+                        <Github className="h-3 w-3" />
+                        Front
                       </a>
                     </Button>
                     <Button
                       variant="outline"
                       size="sm"
-                      className="gap-2"
+                      className="h-7 px-2 text-xs gap-1"
                       asChild
                     >
                       <a href={project.links.backend} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-4 w-4" />
-                        Back-end
+                        <Github className="h-3 w-3" />
+                        Back
                       </a>
                     </Button>
                     <Button
                       size="sm"
-                      className="bg-primary text-primary-foreground hover:bg-primary/90 gap-2"
+                      className="h-7 px-2 text-xs bg-primary text-primary-foreground hover:bg-primary/90 gap-1"
                       asChild
                     >
                       <a href={project.links.deploy} target="_blank" rel="noopener noreferrer">
-                        <ExternalLink className="h-4 w-4" />
-                        Ver Deploy
+                        <ExternalLink className="h-3 w-3" />
+                        Deploy
                       </a>
                     </Button>
                   </div>
@@ -112,13 +117,13 @@ export function ProjectsSection() {
             ))}
 
             {/* Coming Soon Card */}
-            <div className="bg-card border border-dashed border-border rounded-2xl p-8 flex flex-col items-center justify-center text-center min-h-[300px]">
-              <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">🚀</span>
+            <div className="bg-card border border-dashed border-border rounded-xl p-4 flex flex-col items-center justify-center text-center aspect-[4/3]">
+              <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mb-2">
+                <span className="text-lg">🚀</span>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Em breve</h3>
-              <p className="text-muted-foreground text-sm">
-                Novos projetos estão em desenvolvimento
+              <h3 className="text-sm font-semibold text-foreground mb-1">Em breve</h3>
+              <p className="text-muted-foreground text-[10px]">
+                Novos projetos em desenvolvimento
               </p>
             </div>
           </div>

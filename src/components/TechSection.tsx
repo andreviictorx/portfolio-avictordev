@@ -1,33 +1,23 @@
-const techCategories = [
-  {
-    title: "Front-end",
-    techs: [
-      "JavaScript",
-      "TypeScript",
-      "React",
-      "Next.js",
-      "Tailwind CSS",
-      "Styled Components",
-      "HTML5",
-      "CSS3",
-    ],
-  },
-  {
-    title: "Back-end & Banco",
-    techs: ["PostgreSQL", "Prisma", "Supabase", "Neon"],
-  },
-  {
-    title: "Autenticação",
-    techs: ["NextAuth", "BetterAuth"],
-  },
-  {
-    title: "Validação, Forms & Requisições",
-    techs: ["Zod", "React Hook Form", "TanStack Query"],
-  },
-  {
-    title: "Testes",
-    techs: ["Jest", "React Testing Library"],
-  },
+const technologies = [
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Styled Components",
+  "HTML5",
+  "CSS3",
+  "PostgreSQL",
+  "Prisma",
+  "Supabase",
+  "Neon",
+  "NextAuth",
+  "BetterAuth",
+  "Zod",
+  "React Hook Form",
+  "TanStack Query",
+  "Jest",
+  "React Testing Library",
 ];
 
 export function TechSection() {
@@ -43,24 +33,16 @@ export function TechSection() {
             </h2>
           </div>
 
-          {/* Tech Categories */}
-          <div className="space-y-8">
-            {techCategories.map((category, categoryIndex) => (
-              <div key={categoryIndex} className="bg-card border border-border rounded-2xl p-6 sm:p-8">
-                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-6 flex items-center gap-2">
-                  <span className="w-2 h-2 bg-primary rounded-full" />
-                  {category.title}
-                </h3>
-                <div className="flex flex-wrap gap-3">
-                  {category.techs.map((tech, techIndex) => (
-                    <span
-                      key={techIndex}
-                      className="px-4 py-2 bg-secondary text-foreground rounded-lg text-sm font-medium hover:bg-primary/20 hover:text-primary transition-colors cursor-default"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+          {/* Tech Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+            {technologies.map((tech, index) => (
+              <div
+                key={index}
+                className="bg-card border border-border rounded-xl p-4 text-center hover:border-primary/50 hover:bg-primary/5 transition-all group"
+              >
+                <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
+                  {tech}
+                </span>
               </div>
             ))}
           </div>

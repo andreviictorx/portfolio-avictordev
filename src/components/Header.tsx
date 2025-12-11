@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Code2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
@@ -62,18 +63,21 @@ export function Header() {
                 {item.label}
               </a>
             ))}
+            <ThemeToggle />
           </nav>
 
-          {/* Mobile Menu Button */}
-          <Button
-            variant="ghost"
-            size="icon"
-            className="lg:hidden"
-            onClick={() => setIsOpen(!isOpen)}
-            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-          >
-            {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-          </Button>
+          {/* Mobile Controls */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <ThemeToggle />
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            >
+              {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
         </div>
 
         {/* Mobile Nav */}

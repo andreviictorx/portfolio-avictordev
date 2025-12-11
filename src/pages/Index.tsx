@@ -9,8 +9,11 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Force dark mode
-    document.documentElement.classList.add("dark");
+    // Initialize theme from localStorage or system preference
+    const stored = localStorage.getItem("theme");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const shouldBeDark = stored ? stored === "dark" : prefersDark;
+    document.documentElement.classList.toggle("dark", shouldBeDark);
   }, []);
 
   return (

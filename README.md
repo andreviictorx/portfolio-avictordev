@@ -4,7 +4,7 @@ Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvi
 
 O site é totalmente responsivo, focado em performance e UX, e serve como meu cartão de visitas digital.
 
-🔗 **Acesse online:** [Coloque o link do seu site aqui se já tiver]
+🔗 **Acesse online: https://portfolio-avictordev.vercel.app/
 
 ---
 
@@ -12,21 +12,21 @@ O site é totalmente responsivo, focado em performance e UX, e serve como meu ca
 
 Este projeto foi construído com as melhores práticas atuais do ecossistema JavaScript:
 
-* **React** (Vite) - Para construção da interface.
-* **TypeScript** - Para tipagem estática e segurança do código.
-* **Tailwind CSS** - Para estilização rápida e responsiva.
-* **Shadcn/UI** - Componentes de interface reutilizáveis.
-* **Lucide React** - Biblioteca de ícones.
+- **React** (Vite) - Para construção da interface.
+- **TypeScript** - Para tipagem estática e segurança do código.
+- **Tailwind CSS** - Para estilização rápida e responsiva.
+- **Shadcn/UI** - Componentes de interface reutilizáveis.
+- **Lucide React** - Biblioteca de ícones.
 
 ---
 
 ## ✨ Funcionalidades
 
-* **Apresentação:** Seção "Sobre Mim" com foto e resumo profissional.
-* **Vitrine de Projetos:** Destaque para projetos como SIGESTE e Instituto Doralice.
-* **Contato Direto:** Formulário integrado diretamente com a API do WhatsApp.
-* **Design Responsivo:** Layout adaptável para Mobile, Tablet e Desktop.
-* **Animações:** Interfaces fluidas e interativas.
+- **Apresentação:** Seção "Sobre Mim" com foto e resumo profissional.
+- **Vitrine de Projetos:** Destaque para projetos como SIGESTE e Instituto Doralice.
+- **Contato Direto:** Formulário integrado diretamente com a API do WhatsApp.
+- **Design Responsivo:** Layout adaptável para Mobile, Tablet e Desktop.
+- **Animações:** Interfaces fluidas e interativas.
 
 ---
 
@@ -35,16 +35,19 @@ Este projeto foi construído com as melhores práticas atuais do ecossistema Jav
 Siga os passos abaixo para baixar e executar o código na sua máquina:
 
 1.  **Clone o repositório:**
+
     ```bash
-    git clone [https://github.com/andreviictor/seu-repositorio.git](https://github.com/andreviictor/seu-repositorio.git)
+    git clone [https://github.com/andreviictor/portfolio-avictordev](https://github.com/andreviictor/portfolio-avictordev)
     ```
 
 2.  **Acesse a pasta do projeto:**
+
     ```bash
     cd portfolio-dev
     ```
 
 3.  **Instale as dependências:**
+
     ```bash
     npm install
     ```
@@ -62,10 +65,10 @@ O projeto rodará em `http://localhost:8080` (ou a porta indicada no terminal).
 
 Sinta-se à vontade para entrar em contato ou dar feedbacks sobre o projeto!
 
-* **LinkedIn:** [linkedin.com/in/andreviictor](https://www.linkedin.com/in/andreviictor/)
-* **Email:** andreviictorx@gmail.com
-* **GitHub:** [@andreviictor](https://github.com/andreviictorx)
+- **LinkedIn:** [linkedin.com/in/andreviictor](https://www.linkedin.com/in/andreviictor/)
+- **Email:** contatoavictor.dev@gmail.com
+- **GitHub:** [@andreviictor](https://github.com/andreviictorx)
 
 ---
 
-Desenvolvido com 💜 por **André Victor**.
+Desenvolvido por **André Victor**.

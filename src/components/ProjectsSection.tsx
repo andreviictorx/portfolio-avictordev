@@ -6,14 +6,25 @@ const projects = [
     title: "SIGESTE",
     description:
       "Sistema de gerenciamento acadêmico completo com autenticação, painel administrativo, cadastros e landing page institucional.",
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "NextAuth"],
+    stack: ["Next.js", "TypeScript", "Tailwind CSS", "PostgreSQL", "Prisma", "NextAuth", "React"],
+    urlImg:"",
     featured: true,
     links: {
-      frontend: "#",
-      backend: "#",
+      frontend: "https://github.com/andreviictorx/SIGEST",
       deploy: "#",
     },
   },
+  {
+    title: "Instituto doralice",
+    description:
+      "Site para o Instituto de responsabilidade social, onde houve um aumento em 45% da sua visibilidade em seu municipio.",
+    stack: ["Javascript", "HTML", "CSS"],
+    featured: false,
+    urlImg: "",
+    links: {
+      deploy: "https://institutodoralice.vercel.app/",
+    },
+  }
 ];
 
 export function ProjectsSection() {
@@ -21,7 +32,6 @@ export function ProjectsSection() {
     <section id="projetos" className="py-20 lg:py-32">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          {/* Section Header */}
           <div className="text-center mb-12 lg:mb-16">
             <span className="font-mono text-primary text-sm mb-2 block">// trabalhos</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground">
@@ -29,7 +39,7 @@ export function ProjectsSection() {
             </h2>
           </div>
 
-          {/* Projects Grid */}
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {projects.map((project, index) => (
               <div
@@ -38,29 +48,25 @@ export function ProjectsSection() {
                   project.featured ? "border-primary/30" : "border-border"
                 }`}
               >
-                {/* Project Image Placeholder */}
                 <div className="aspect-video bg-secondary/50 relative overflow-hidden">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <span className="font-mono text-muted-foreground text-xs">
-                      // preview
+                      
                     </span>
                   </div>
                   {project.featured && (
                     <div className="absolute top-2 left-2 flex items-center gap-1 bg-primary text-primary-foreground px-2 py-0.5 rounded-full text-[10px] font-semibold">
                       <Star className="h-2.5 w-2.5" />
-                      Destaque
+                      Destaque  
                     </div>
                   )}
                 </div>
 
-                {/* Project Info */}
                 <div className="p-4">
                   <h3 className="text-base font-bold text-foreground mb-2">
                     {project.title}
                   </h3>
                   <p className="text-muted-foreground text-xs mb-3 line-clamp-2">{project.description}</p>
-
-                  {/* Stack */}
                   <div className="flex flex-wrap gap-1 mb-3">
                     {project.stack.slice(0, 4).map((tech, techIndex) => (
                       <span
@@ -76,8 +82,6 @@ export function ProjectsSection() {
                       </span>
                     )}
                   </div>
-
-                  {/* Links */}
                   <div className="flex gap-2">
                     <Button
                       variant="outline"
@@ -88,17 +92,6 @@ export function ProjectsSection() {
                       <a href={project.links.frontend} target="_blank" rel="noopener noreferrer">
                         <Github className="h-3 w-3" />
                         Front
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="h-7 px-2 text-xs gap-1"
-                      asChild
-                    >
-                      <a href={project.links.backend} target="_blank" rel="noopener noreferrer">
-                        <Github className="h-3 w-3" />
-                        Back
                       </a>
                     </Button>
                     <Button
@@ -115,8 +108,6 @@ export function ProjectsSection() {
                 </div>
               </div>
             ))}
-
-            {/* Coming Soon Card */}
             <div className="bg-card border border-dashed border-border rounded-xl p-4 flex flex-col items-center justify-center text-center aspect-[4/3]">
               <div className="w-10 h-10 bg-secondary rounded-full flex items-center justify-center mb-2">
                 <span className="text-lg">🚀</span>

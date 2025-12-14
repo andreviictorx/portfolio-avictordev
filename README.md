@@ -1,73 +1,71 @@
-# Welcome to your Lovable project
+# 👨‍💻 Portfólio | André Victor
 
-## Project info
+Bem-vindo ao repositório do meu portfólio pessoal! Este projeto foi desenvolvido para apresentar meus projetos, habilidades e trajetória como Desenvolvedor Front-End.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+O site é totalmente responsivo, focado em performance e UX, e serve como meu cartão de visitas digital.
 
-## How can I edit this code?
+🔗 **Acesse online:** [Coloque o link do seu site aqui se já tiver]
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## 🚀 Tecnologias Utilizadas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Este projeto foi construído com as melhores práticas atuais do ecossistema JavaScript:
 
-Changes made via Lovable will be committed automatically to this repo.
+* **React** (Vite) - Para construção da interface.
+* **TypeScript** - Para tipagem estática e segurança do código.
+* **Tailwind CSS** - Para estilização rápida e responsiva.
+* **Shadcn/UI** - Componentes de interface reutilizáveis.
+* **Lucide React** - Biblioteca de ícones.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## ✨ Funcionalidades
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+* **Apresentação:** Seção "Sobre Mim" com foto e resumo profissional.
+* **Vitrine de Projetos:** Destaque para projetos como SIGESTE e Instituto Doralice.
+* **Contato Direto:** Formulário integrado diretamente com a API do WhatsApp.
+* **Design Responsivo:** Layout adaptável para Mobile, Tablet e Desktop.
+* **Animações:** Interfaces fluidas e interativas.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📦 Como rodar o projeto localmente
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+Siga os passos abaixo para baixar e executar o código na sua máquina:
 
-# Step 3: Install the necessary dependencies.
-npm i
+1.  **Clone o repositório:**
+    ```bash
+    git clone [https://github.com/andreviictor/seu-repositorio.git](https://github.com/andreviictor/seu-repositorio.git)
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+2.  **Acesse a pasta do projeto:**
+    ```bash
+    cd portfolio-dev
+    ```
 
-**Edit a file directly in GitHub**
+3.  **Instale as dependências:**
+    ```bash
+    npm install
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+4.  **Inicie o servidor de desenvolvimento:**
+    ```bash
+    npm run dev
+    ```
 
-**Use GitHub Codespaces**
+O projeto rodará em `http://localhost:8080` (ou a porta indicada no terminal).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+---
 
-## What technologies are used for this project?
+## 📬 Contato
 
-This project is built with:
+Sinta-se à vontade para entrar em contato ou dar feedbacks sobre o projeto!
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+* **LinkedIn:** [linkedin.com/in/andreviictor](https://www.linkedin.com/in/andreviictor/)
+* **Email:** andreviictorx@gmail.com
+* **GitHub:** [@andreviictor](https://github.com/andreviictorx)
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Desenvolvido com 💜 por **André Victor**.

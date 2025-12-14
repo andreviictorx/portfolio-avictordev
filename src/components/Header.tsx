@@ -45,10 +45,9 @@ export function Header() {
             className="flex items-center gap-2 text-foreground hover:text-primary transition-colors"
           >
             <Code2 className="h-8 w-8 text-primary" />
-            <span className="font-mono font-semibold text-lg">avictor.dev</span>
+            <span className="font-mono font-semibold text-lg  bg-gradient-to-r from-primary to-purple-600 bg-clip-text text-transparent" >avictor.dev</span>
           </a>
 
-          {/* Desktop Nav */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <a
@@ -66,7 +65,7 @@ export function Header() {
             <ThemeToggle />
           </nav>
 
-          {/* Mobile Controls */}
+     
           <div className="flex items-center gap-2 lg:hidden">
             <ThemeToggle />
             <Button
@@ -80,7 +79,6 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Nav */}
         {isOpen && (
           <nav className="lg:hidden py-4 border-t border-border">
             <div className="flex flex-col gap-2">

@@ -9,7 +9,6 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   useEffect(() => {
-    // Initialize theme from localStorage or system preference
     const stored = localStorage.getItem("theme");
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const shouldBeDark = stored ? stored === "dark" : prefersDark;

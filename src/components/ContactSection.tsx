@@ -9,7 +9,7 @@ const contactLinks = [
   {
     label: "WhatsApp",
     icon: MessageCircle,
-    href: "https://wa.me/5500000000000",
+    href: "https://wa.me/5598985193088",
     color: "bg-green-500/10 text-green-500 hover:bg-green-500/20",
   },
   {
@@ -21,7 +21,7 @@ const contactLinks = [
   {
     label: "LinkedIn",
     icon: Linkedin,
-    href: "https://linkedin.com/in/avictordev",
+    href: "https://linkedin.com/in/andreviictor",
     color: "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20",
   },
 ];
@@ -38,15 +38,18 @@ export function ContactSection() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    // Simula envio - integrar com backend depois
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
+    const phoneNumber = "5598985193088";
+    const message = `*Novo Contato do Portfólio* \n\n*Nome:* ${formData.name}\n*Email:* ${formData.email}\n*Mensagem:* ${formData.message}`;
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     toast({
       title: "Mensagem enviada!",
       description: "Entrarei em contato em breve.",
     });
 
+    window.open(whatsappUrl, '_blank');
+    
     setFormData({ name: "", email: "", message: "" });
     setIsSubmitting(false);
   };
@@ -55,7 +58,7 @@ export function ContactSection() {
     <section id="contato" className="py-20 lg:py-32 bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
-          {/* Section Header */}
+  
           <div className="text-center mb-12 lg:mb-16">
             <span className="font-mono text-primary text-sm mb-2 block">// contato</span>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
@@ -68,7 +71,7 @@ export function ContactSection() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {/* Contact Form */}
+            
             <div className="bg-card border border-border rounded-2xl p-6 sm:p-8">
               <h3 className="text-xl font-semibold text-foreground mb-6">
                 Envie uma mensagem
@@ -126,7 +129,7 @@ export function ContactSection() {
               </form>
             </div>
 
-            {/* Social Links */}
+           
             <div className="flex flex-col justify-center">
               <h3 className="text-xl font-semibold text-foreground mb-6 text-center lg:text-left">
                 Ou entre em contato direto
@@ -148,14 +151,13 @@ export function ContactSection() {
                 ))}
               </div>
 
-              {/* Email Alternative */}
               <p className="text-muted-foreground text-sm text-center lg:text-left">
                 Ou envie um email para{" "}
                 <a
-                  href="mailto:contato@avictor.dev"
+                  href="mailto:contatoavictor.dev@gmail.com"
                   className="text-primary hover:underline"
                 >
-                  contato@avictor.dev
+                  contatoavictor.dev@gmail.com
                 </a>
               </p>
             </div>

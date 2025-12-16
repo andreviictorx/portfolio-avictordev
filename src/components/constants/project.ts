@@ -27,7 +27,7 @@ export const projects: Project[] = [
       "Site para o Instituto de responsabilidade social, onde houve um aumento em 45% da sua visibilidade em seu municipio.",
     stack: ["Javascript", "HTML", "CSS"],
     featured: false,
-    urlImg: "/public/photoInstituto.png",
+    urlImg: "/photoInstituto.png",
     links: {
       deploy: "https://institutodoralice.vercel.app/",
     },
